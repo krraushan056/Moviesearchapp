@@ -1,0 +1,23 @@
+<%- include ("partial/header") %>
+
+<h2>
+	RESULT PAGE !!!
+</h2>
+<ul>
+	
+	<% data["Search"].forEach(function(movie) { %>
+<li>
+	
+		<strong><em>TITLE:</em><%= movie["Title"]%>
+	</strong></li>
+	<ul>
+	<li><em>YEAR:</em> <%= movie["Year"] %></li>
+		<li><em>IMDBID: </em><%= movie["imdbID"] %></li>
+		<li><em>TYPE:</em> <%= movie["Type"] %></li>
+		<li><em>POSTER:</em> <a href= <%= movie["Poster"] %>>SEARCH FOR POSTER</a></li>
+	</ul>
+
+<% }) %>
+</ul>
+<a href="/">SEARCH AGAIN</a>
+<%- include ("partial/footer") %>
